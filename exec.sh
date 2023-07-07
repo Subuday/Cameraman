@@ -12,15 +12,15 @@ accelerate launch train_dreambooth.py \
   --center_crop \
   --output_dir=$OUTPUT_DIR \
   --instance_prompt="a photo of sks person" \
-  --class_promp="a photo of a person in a restaurant" \
+  --class_promp="a photo of a person" \
   --center_crop \
-  --num_class_images=100 \
+  --num_class_images=1000 \
   --with_prior_preservation \
   --prior_loss_weight=1.0 \
   --train_text_encoder \
-  --train_batch_size=4 \
+  --train_batch_size=5 \
   --gradient_accumulation_steps=1 \
-  --max_train_steps=2500 \
+  --max_train_steps=6000 \
   --learning_rate=1e-6 \
   --lr_scheduler="constant" \
   --lr_warmup_steps=0 \
